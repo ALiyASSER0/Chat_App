@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_15sdp"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/Imaggg"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        tools:src="@drawable/image1"
+        android:layout_marginEnd="@dimen/_15sdp"
+        app:civ_border_color="@color/Whats"
+        app:civ_border_width="4dp"
+
+        android:layout_marginStart="@dimen/_10sdp"
+      app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+      android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="I am chat"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+android:layout_marginStart="@dimen/_7sdp"
+        app:layout_constraintStart_toEndOf="@+id/Imaggg"
+        app:layout_constraintTop_toTopOf="@+id/Imaggg" />
+    <TextView
+        android:id="@+id/partChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_7sdp"
+        tools:text="5/9/2023"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintStart_toEndOf="@+id/Imaggg"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

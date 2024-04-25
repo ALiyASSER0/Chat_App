@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/whats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Enter your phone number"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/Whats"
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WhatsApp will need to verify your account"
+        android:textSize="@dimen/_15sdp"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whats"
+        />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+       android:id="@+id/coordinatorLay"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_23sdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintWidth_percent="0.70">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_16sdp"
+            android:hint="Select"
+            app:hintTextColor="@color/Whats"
+            android:backgroundTint="@color/Whats"
+            app:boxStrokeColor="@color/Whats"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_text"
+                android:text="Egypt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <EditText
+       android:id="@+id/phoneId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+20"
+        android:gravity="center"
+android:enabled="false"
+
+
+        android:textColor="@color/black"
+        android:textStyle="bold"
+android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="@+id/coordinatorLay"
+        app:layout_constraintTop_toBottomOf="@+id/coordinatorLay"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="phone number"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/coordinatorLay"
+        app:layout_constraintStart_toEndOf="@+id/phoneId"
+        app:layout_constraintTop_toBottomOf="@+id/coordinatorLay" />
+
+    <com.google.android.material.button.MaterialButton
+      android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+
+        android:background="@drawable/background"
+app:backgroundTint="@color/Whats"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
